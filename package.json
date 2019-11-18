@@ -1,0 +1,44 @@
+{
+  "name": "lula-remote",
+  "version": "0.1.0",
+  "description": "Microservice to sync streams for Redis-based distributed messaging",
+  "main": "index.js",
+  "scripts": {
+    "test": "NODE_ENV=test jest",
+    "start": "node lib/server",
+    "start:dev": "NODE_ENV=development node lib/server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:evanx/lula-hub.git"
+  },
+  "keywords": [
+    "Fastify",
+    "Redis",
+    "Redis streams"
+  ],
+  "author": "Evan Summers",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "eslint": "^6.6.0",
+    "eslint-config-prettier": "^6.5.0",
+    "eslint-config-prettier-standard": "^3.0.1",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "jest": "^24.8.0",
+    "nodemon": "^1.19.1",
+    "prettier": "1.19.1",
+    "prettier-config-standard": "^1.0.1"
+  },
+  "dependencies": {
+    "config": "^3.2.2",
+    "ioredis": "^4.14.0",
+    "lodash": "^4.17.15",
+    "node-fetch": "^2.6.0",
+    "pino-pretty": "^3.2.0"
+  }
+}
