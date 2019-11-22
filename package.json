@@ -1,5 +1,5 @@
 {
-  "name": "lula-remote",
+  "name": "lula-client",
   "version": "0.1.0",
   "description": "Microservice to sync streams for Redis-based distributed messaging",
   "main": "index.js",
