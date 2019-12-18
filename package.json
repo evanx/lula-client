@@ -4,13 +4,13 @@
   "description": "Microservice to sync streams for Redis-based distributed messaging",
   "main": "index.js",
   "scripts": {
-    "test": "NODE_ENV=test jest",
-    "start": "node lib/server",
-    "start:dev": "NODE_ENV=development node lib/server"
+    "test": "NODE_CONFIG_ENV=testing jest",
+    "start": "node index.js",
+    "start:dev": "NODE_ENV=development LOG_LEVEL=debug LOG_PRETTY=true LULA_SECRET=lula-secret node index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:evanx/lula-hub.git"
+    "url": "git@github.com:evanx/lula-client.git"
   },
   "keywords": [
     "Fastify",
@@ -20,6 +20,7 @@
   "author": "Evan Summers",
   "license": "Apache-2.0",
   "devDependencies": {
+    "bcrypt": "^3.0.7",
     "eslint": "^6.6.0",
     "eslint-config-prettier": "^6.5.0",
     "eslint-config-prettier-standard": "^3.0.1",
@@ -35,10 +36,12 @@
     "prettier-config-standard": "^1.0.1"
   },
   "dependencies": {
-    "config": "^3.2.2",
+    "config": "^3.2.4",
     "ioredis": "^4.14.0",
-    "lodash": "^4.17.15",
+    "lula-client": "git+https://git@github.com/evanx/lula-client.git",
     "node-fetch": "^2.6.0",
+    "otplib": "^11.0.1",
+    "pino": "^5.14.0",
     "pino-pretty": "^3.2.0"
   }
 }

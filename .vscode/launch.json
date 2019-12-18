@@ -1,0 +1,40 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "start",
+      "program": "${workspaceFolder}/index.js",
+      "outputCapture": "std",
+      "env": {
+        "NODE_ENV": "development",
+        "LOG_LEVEL": "debug",
+        "LOG_PRETTY": "true",
+        "LULA_SECRET": "lula-secret"
+      }
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "mdel",
+      "program": "${workspaceFolder}/scripts/mdel.js",
+      "env": {
+        "NODE_ENV": "development",
+        "MDEL_MATCH": "lula-client:*"
+      }
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Jest Test",
+      "program": "${workspaceFolder}/node_modules/jest/bin/jest",
+      "args": ["--runInBand", "--config=${workspaceFolder}/jest.config.js"],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "env": {
+        "NODE_CONFIG_ENV": "testing"
+      }
+    }
+  ]
+}
