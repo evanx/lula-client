@@ -74,6 +74,7 @@ regTokenRes=`node ./scripts/bcrypt.js "${regToken}"`
 _clear() {
   _del lula:out:${client}:x
   _del lula:in:x
+  _del lula:id:h
   _del lula:client:${client}:h
   _del lula-client:client:h
   _del lula-client:in:x
@@ -92,8 +93,10 @@ _hmset lula:client:${client}:h regToken "${regTokenRes}"
 _hmset lula:client:${client}:h regDeadline "${regDeadline}"
 _hmset lula:client:${client}:h otpSecret "${optSecret}"
 
-redis-cli xadd lula:out:${client}:x 1555000111000-0 type test-hub-out-1 payload '{}' 
-redis-cli xadd lula-client:out:x 1555000111000-0 type test-client-out-1 payload '{}' 
+redis-cli xadd lula:out:${client}:x 1555000111000-1 type test-hub-out-1 payload '{}' 
+redis-cli xadd lula:out:${client}:x 1555000111000-2 type test-hub-out-2 payload '{}' 
+redis-cli xadd lula-client:out:x 1555000111000-1 type test-client-out-1 payload '{}' 
+redis-cli xadd lula-client:out:x 1555000111000-2 type test-client-out-2 payload '{}' 
 
 _review 
 
