@@ -38,7 +38,7 @@
   "dependencies": {
     "config": "^3.2.4",
     "ioredis": "^4.14.0",
-    "lula-client": "git+https://git@github.com/evanx/lula-client.git",
+    "lula-common": "git+https://git@github.com/evanx/lula-common.git",
     "node-fetch": "^2.6.0",
     "otplib": "^11.0.1",
     "pino": "^5.14.0",
