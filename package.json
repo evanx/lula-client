@@ -20,7 +20,7 @@
   "author": "Evan Summers",
   "license": "Apache-2.0",
   "devDependencies": {
-    "bcrypt": "^3.0.7",
+    "bcrypt": "^5.0.0",
     "eslint": "^6.6.0",
     "eslint-config-prettier": "^6.5.0",
     "eslint-config-prettier-standard": "^3.0.1",
